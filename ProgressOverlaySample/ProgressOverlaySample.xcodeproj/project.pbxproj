@@ -12,6 +12,7 @@
 		770A30F121AB125100603B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 770A30F021AB125100603B45 /* Assets.xcassets */; };
 		770A30F421AB125100603B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770A30F221AB125100603B45 /* Main.storyboard */; };
 		770A30FE21AB13FF00603B45 /* ProgressOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */; };
+		770A310021AB229800603B45 /* NSView+ProgressOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		770A30F521AB125100603B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		770A30F621AB125100603B45 /* ProgressOverlaySample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProgressOverlaySample.entitlements; sourceTree = "<group>"; };
 		770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressOverlayView.swift; sourceTree = "<group>"; };
+		770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+ProgressOverlay.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */,
+				770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */,
 			);
 			path = ProgressOverlayView;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				770A30EF21AB124F00603B45 /* ViewController.swift in Sources */,
+				770A310021AB229800603B45 /* NSView+ProgressOverlay.swift in Sources */,
 				770A30FE21AB13FF00603B45 /* ProgressOverlayView.swift in Sources */,
 				770A30ED21AB124F00603B45 /* AppDelegate.swift in Sources */,
 			);
