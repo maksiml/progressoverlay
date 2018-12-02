@@ -10,10 +10,14 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var testView: NSView!
+    
+    @IBOutlet weak var showOverlayButton: NSButtonCell!
+    
+    var showOverlay = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override var representedObject: Any? {
@@ -22,6 +26,16 @@ class ViewController: NSViewController {
         }
     }
 
-
+    @IBAction func showOverlay(_ sender: Any) {
+        showOverlay = !showOverlay
+        if showOverlay {
+            testView.showOverlay()
+            showOverlayButton.title = "Hide overlay"
+        } else {
+            testView.hideOverlay()
+            showOverlayButton.title = "Show overlay"
+        }
+    }
+    
 }
 
