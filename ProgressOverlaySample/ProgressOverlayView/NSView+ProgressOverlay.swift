@@ -69,8 +69,12 @@ extension NSView {
     /// Disables controls in the view while overllay is present.
     private func disableControls() {
         for subView in allSubviews {
-            if let disableableTextView = subView as? DisableableTextView {
-                disableableTextView.disable()
+            if let textView = subView as? DisableableTextView {
+                if !textView.isEnabled && NSView.disabledControls.object(forKey: textView) == nil {
+                    NSView.disabledControls.setObject(textView, forKey: textView)
+                } else {
+                    textView.isEnabled = false
+                }
             } else if let control = subView as? NSControl {
                 if !control.isEnabled && NSView.disabledControls.object(forKey: control) == nil {
                     NSView.disabledControls.setObject(control, forKey: control)
@@ -84,8 +88,10 @@ extension NSView {
     /// Enables controls in the view when overlay is removed.
     private func enableControls() {
         for subView in allSubviews {
-            if let disableableTextView = subView as? DisableableTextView {
-                disableableTextView.enable()
+            if let textView = subView as? DisableableTextView {
+                if NSView.disabledControls.object(forKey: textView) == nil {
+                    textView.isEnabled = true
+                }
             } else if let control = subView as? NSControl {
                 if NSView.disabledControls.object(forKey: control) == nil {
                     control.isEnabled = true
