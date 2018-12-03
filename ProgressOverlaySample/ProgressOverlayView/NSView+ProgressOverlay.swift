@@ -13,6 +13,8 @@ extension NSView {
     /// Contains all overlays ever presented mapped to respective view.
     private static var overlays = NSMapTable<NSView, ProgressOverlayView>(keyOptions: .weakMemory, valueOptions: .strongMemory)
     
+    private static var disabledControls = NSMapTable<NSView, NSView>(keyOptions: .weakMemory, valueOptions: .weakMemory)
+    
     /// Retrieves a progress overlay associate with the current view. Creates a new one
     /// if the view was not yet created.
     public var progressOverlay: ProgressOverlayView? {
@@ -70,7 +72,11 @@ extension NSView {
             if let disableableTextView = subView as? DisableableTextView {
                 disableableTextView.disable()
             } else if let control = subView as? NSControl {
-                control.isEnabled = false
+                if !control.isEnabled && NSView.disabledControls.object(forKey: control) == nil {
+                    NSView.disabledControls.setObject(control, forKey: control)
+                } else {
+                    control.isEnabled = false
+                }
             }
         }
     }
@@ -81,7 +87,9 @@ extension NSView {
             if let disableableTextView = subView as? DisableableTextView {
                 disableableTextView.enable()
             } else if let control = subView as? NSControl {
-                control.isEnabled = true
+                if NSView.disabledControls.object(forKey: control) == nil {
+                    control.isEnabled = true
+                }
             }
         }
     }
