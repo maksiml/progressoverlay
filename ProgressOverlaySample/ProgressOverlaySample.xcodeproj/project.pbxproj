@@ -13,10 +13,12 @@
 		770A30F421AB125100603B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770A30F221AB125100603B45 /* Main.storyboard */; };
 		770A30FE21AB13FF00603B45 /* ProgressOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */; };
 		770A310021AB229800603B45 /* NSView+ProgressOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */; };
-		770A310221B493E300603B45 /* DisableableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310121B493E300603B45 /* DisableableTextView.swift */; };
+		770A310221B493E300603B45 /* DisablableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310121B493E300603B45 /* DisablableTextView.swift */; };
 		770A310421B50B0E00603B45 /* NSTextField+UserInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310321B50B0E00603B45 /* NSTextField+UserInteraction.swift */; };
 		770A310621B50DEC00603B45 /* NSControl+UserInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310521B50DEC00603B45 /* NSControl+UserInteraction.swift */; };
 		770A310821B511EB00603B45 /* NSTextView+UserInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310721B511EB00603B45 /* NSTextView+UserInteraction.swift */; };
+		770A310A21B5204200603B45 /* DisablableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310921B5204200603B45 /* DisablableScrollView.swift */; };
+		770A310C21B521B900603B45 /* NSScrollView+UserIneraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310B21B521B900603B45 /* NSScrollView+UserIneraction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,10 +31,12 @@
 		770A30F621AB125100603B45 /* ProgressOverlaySample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProgressOverlaySample.entitlements; sourceTree = "<group>"; };
 		770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressOverlayView.swift; sourceTree = "<group>"; };
 		770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+ProgressOverlay.swift"; sourceTree = "<group>"; };
-		770A310121B493E300603B45 /* DisableableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableableTextView.swift; sourceTree = "<group>"; };
+		770A310121B493E300603B45 /* DisablableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisablableTextView.swift; sourceTree = "<group>"; };
 		770A310321B50B0E00603B45 /* NSTextField+UserInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField+UserInteraction.swift"; sourceTree = "<group>"; };
 		770A310521B50DEC00603B45 /* NSControl+UserInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSControl+UserInteraction.swift"; sourceTree = "<group>"; };
 		770A310721B511EB00603B45 /* NSTextView+UserInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+UserInteraction.swift"; sourceTree = "<group>"; };
+		770A310921B5204200603B45 /* DisablableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisablableScrollView.swift; sourceTree = "<group>"; };
+		770A310B21B521B900603B45 /* NSScrollView+UserIneraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSScrollView+UserIneraction.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +83,14 @@
 		770A30FC21AB138000603B45 /* ProgressOverlayView */ = {
 			isa = PBXGroup;
 			children = (
-				770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */,
-				770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */,
-				770A310121B493E300603B45 /* DisableableTextView.swift */,
-				770A310321B50B0E00603B45 /* NSTextField+UserInteraction.swift */,
+				770A310921B5204200603B45 /* DisablableScrollView.swift */,
+				770A310121B493E300603B45 /* DisablableTextView.swift */,
 				770A310521B50DEC00603B45 /* NSControl+UserInteraction.swift */,
+				770A310B21B521B900603B45 /* NSScrollView+UserIneraction.swift */,
+				770A310321B50B0E00603B45 /* NSTextField+UserInteraction.swift */,
 				770A310721B511EB00603B45 /* NSTextView+UserInteraction.swift */,
+				770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */,
+				770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */,
 			);
 			path = ProgressOverlayView;
 			sourceTree = "<group>";
@@ -160,13 +166,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				770A30EF21AB124F00603B45 /* ViewController.swift in Sources */,
-				770A310221B493E300603B45 /* DisableableTextView.swift in Sources */,
+				770A310221B493E300603B45 /* DisablableTextView.swift in Sources */,
 				770A310021AB229800603B45 /* NSView+ProgressOverlay.swift in Sources */,
 				770A30FE21AB13FF00603B45 /* ProgressOverlayView.swift in Sources */,
 				770A310821B511EB00603B45 /* NSTextView+UserInteraction.swift in Sources */,
 				770A310421B50B0E00603B45 /* NSTextField+UserInteraction.swift in Sources */,
+				770A310A21B5204200603B45 /* DisablableScrollView.swift in Sources */,
 				770A30ED21AB124F00603B45 /* AppDelegate.swift in Sources */,
 				770A310621B50DEC00603B45 /* NSControl+UserInteraction.swift in Sources */,
+				770A310C21B521B900603B45 /* NSScrollView+UserIneraction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

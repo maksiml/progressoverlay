@@ -14,7 +14,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var showOverlayButton: NSButtonCell!
     
-    @IBOutlet var disabledTextView: DisableableTextView!
+    @IBOutlet var disabledTextView: DisablableTextView!
     
     var showOverlay = false
     

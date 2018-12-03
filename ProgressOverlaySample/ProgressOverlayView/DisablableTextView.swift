@@ -1,5 +1,5 @@
 //
-//  DisableableTextView.swift
+//  DisablableTextView.swift
 //  ProgressOverlaySample
 //
 //  Created by Maksim Libenson on 12/3/18.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class DisableableTextView: NSTextView {
+class DisablableTextView: NSTextView {
     
     /// Saves current control state.
     private var enabled = true
@@ -36,6 +36,27 @@ class DisableableTextView: NSTextView {
         }
         
         return nil
+    }
+    
+    /// Prevents keyboard scrolling when user interaction is disabled.
+    override func keyUp(with event: NSEvent) {
+        if enabled {
+            super.keyUp(with: event)
+        }
+    }
+    
+    /// Prevents keyboard scrolling when user interaction is disabled.
+    override func keyDown(with event: NSEvent) {
+        if enabled {
+            super.keyDown(with: event)
+        }
+    }
+    
+    /// Prevents keyboard scrolling when user interaction is disabled.
+    override func interpretKeyEvents(_ eventArray: [NSEvent]) {
+        if enabled {
+            super.interpretKeyEvents(eventArray)
+        }
     }
     
     /// Disables the control.

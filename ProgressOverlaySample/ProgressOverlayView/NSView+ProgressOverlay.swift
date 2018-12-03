@@ -71,6 +71,8 @@ extension NSView {
                 textView.disableUserInteraction()
             } else if let textField = subView as? NSTextField {
                 textField.disableUserInteraction()
+            } else if let scrollView = subView as? NSScrollView {
+                scrollView.disableUserInteraction()
             } else if let control = subView as? NSControl {
                 control.disableControlUserInteraction()
             }
@@ -84,6 +86,8 @@ extension NSView {
                 textView.enableUserInteraction()
             } else if let textField = subView as? NSTextField {
                 textField.enableUserInteraction()
+            } else if let scrollView = subView as? NSScrollView {
+                scrollView.enableUserInteraction()
             } else if let control = subView as? NSControl {
                 control.enableControlUserInteraction()
             }

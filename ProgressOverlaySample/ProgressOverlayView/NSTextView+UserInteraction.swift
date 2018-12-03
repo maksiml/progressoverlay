@@ -38,10 +38,10 @@ extension NSTextView {
      will be called.
     */
     internal func disableUserInteraction() {
-        let savedState = SavedState(isEnabled: (self as? DisableableTextView)?.isEnabled ?? true, isEditable: isEditable, isSelectable: isSelectable)
+        let savedState = SavedState(isEnabled: (self as? DisablableTextView)?.isEnabled ?? true, isEditable: isEditable, isSelectable: isSelectable)
         NSTextView.savedStates.setObject(savedState, forKey: self)
         
-        if let diableableTextView = self as? DisableableTextView {
+        if let diableableTextView = self as? DisablableTextView {
             diableableTextView.isEnabled = false
         }
         
@@ -56,7 +56,7 @@ extension NSTextView {
     */
     internal func enableUserInteraction() {
         if let savedState = NSTextView.savedStates.object(forKey: self) {
-            if let diableableTextView = self as? DisableableTextView {
+            if let diableableTextView = self as? DisablableTextView {
                 diableableTextView.isEnabled = savedState.isEnabled
             }
             
