@@ -13,8 +13,6 @@ extension NSView {
     /// Contains all overlays ever presented mapped to respective view.
     private static var overlays = NSMapTable<NSView, ProgressOverlayView>(keyOptions: .weakMemory, valueOptions: .strongMemory)
     
-    private static var disabledControls = NSMapTable<NSView, NSView>(keyOptions: .weakMemory, valueOptions: .weakMemory)
-    
     /// Retrieves a progress overlay associate with the current view. Creates a new one
     /// if the view was not yet created.
     public var progressOverlay: ProgressOverlayView? {
@@ -69,18 +67,12 @@ extension NSView {
     /// Disables controls in the view while overllay is present.
     private func disableControls() {
         for subView in allSubviews {
-            if let textView = subView as? DisableableTextView {
-                if !textView.isEnabled && NSView.disabledControls.object(forKey: textView) == nil {
-                    NSView.disabledControls.setObject(textView, forKey: textView)
-                } else {
-                    textView.isEnabled = false
-                }
+            if let textView = subView as? NSTextView {
+                textView.disableUserInteraction()
+            } else if let textField = subView as? NSTextField {
+                textField.disableUserInteraction()
             } else if let control = subView as? NSControl {
-                if !control.isEnabled && NSView.disabledControls.object(forKey: control) == nil {
-                    NSView.disabledControls.setObject(control, forKey: control)
-                } else {
-                    control.isEnabled = false
-                }
+                control.disableControlUserInteraction()
             }
         }
     }
@@ -88,14 +80,12 @@ extension NSView {
     /// Enables controls in the view when overlay is removed.
     private func enableControls() {
         for subView in allSubviews {
-            if let textView = subView as? DisableableTextView {
-                if NSView.disabledControls.object(forKey: textView) == nil {
-                    textView.isEnabled = true
-                }
+            if let textView = subView as? NSTextView {
+                textView.enableUserInteraction()
+            } else if let textField = subView as? NSTextField {
+                textField.enableUserInteraction()
             } else if let control = subView as? NSControl {
-                if NSView.disabledControls.object(forKey: control) == nil {
-                    control.isEnabled = true
-                }
+                control.enableControlUserInteraction()
             }
         }
     }

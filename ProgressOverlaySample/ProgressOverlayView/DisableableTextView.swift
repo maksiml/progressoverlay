@@ -40,14 +40,14 @@ class DisableableTextView: NSTextView {
     
     /// Disables the control.
     private func disable() {
-        isEnabled = false
+        enabled = false
         isSelectable = false
         isEditable = false
     }
     
     /// Enables the control.
     private func enable() {
-        isEnabled = true
+        enabled = true
         isSelectable = true
         isEditable = true
     }
