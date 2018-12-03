@@ -19,6 +19,7 @@
 		770A310821B511EB00603B45 /* NSTextView+UserInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310721B511EB00603B45 /* NSTextView+UserInteraction.swift */; };
 		770A310A21B5204200603B45 /* DisablableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310921B5204200603B45 /* DisablableScrollView.swift */; };
 		770A310C21B521B900603B45 /* NSScrollView+UserIneraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A310B21B521B900603B45 /* NSScrollView+UserIneraction.swift */; };
+		770A314621B58CF900603B45 /* NSTextField+Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A314521B58CF900603B45 /* NSTextField+Selection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		770A310721B511EB00603B45 /* NSTextView+UserInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextView+UserInteraction.swift"; sourceTree = "<group>"; };
 		770A310921B5204200603B45 /* DisablableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisablableScrollView.swift; sourceTree = "<group>"; };
 		770A310B21B521B900603B45 /* NSScrollView+UserIneraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSScrollView+UserIneraction.swift"; sourceTree = "<group>"; };
+		770A314521B58CF900603B45 /* NSTextField+Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField+Selection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				770A310721B511EB00603B45 /* NSTextView+UserInteraction.swift */,
 				770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */,
 				770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */,
+				770A314521B58CF900603B45 /* NSTextField+Selection.swift */,
 			);
 			path = ProgressOverlayView;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				770A310421B50B0E00603B45 /* NSTextField+UserInteraction.swift in Sources */,
 				770A310A21B5204200603B45 /* DisablableScrollView.swift in Sources */,
 				770A30ED21AB124F00603B45 /* AppDelegate.swift in Sources */,
+				770A314621B58CF900603B45 /* NSTextField+Selection.swift in Sources */,
 				770A310621B50DEC00603B45 /* NSControl+UserInteraction.swift in Sources */,
 				770A310C21B521B900603B45 /* NSScrollView+UserIneraction.swift in Sources */,
 			);

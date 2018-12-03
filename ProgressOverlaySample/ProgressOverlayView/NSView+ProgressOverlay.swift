@@ -13,6 +13,10 @@ extension NSView {
     /// Contains all overlays ever presented mapped to respective view.
     private static var overlays = NSMapTable<NSView, ProgressOverlayView>(keyOptions: .weakMemory, valueOptions: .strongMemory)
     
+    private static var eventMonitors = NSMapTable<NSView, NSObject>(keyOptions: .weakMemory, valueOptions: .strongMemory)
+    
+    private static var firstResponders = NSMapTable<NSView, NSResponder>(keyOptions: .weakMemory, valueOptions: .strongMemory)
+    
     /// Retrieves a progress overlay associate with the current view. Creates a new one
     /// if the view was not yet created.
     public var progressOverlay: ProgressOverlayView? {
@@ -50,47 +54,48 @@ extension NSView {
     public func showOverlay() {
         if let overlay = progressOverlay {
             self.addSubview(overlay)
+            var firstResponder = window?.firstResponder;
+            var view = firstResponder as? NSView
+            while view != nil {
+                if let textField = view as? NSTextField {
+                    textField.preserveSelection()
+                    firstResponder = textField
+                    break
+                }
+                view = view?.superview
+            }
+            
+            NSView.firstResponders.setObject(firstResponder, forKey: self)
+            self.window?.makeFirstResponder(overlay)
+            
+            let monitor = NSEvent.addLocalMonitorForEvents(matching: [.leftMouseUp, .rightMouseUp, .leftMouseDown, .rightMouseUp, .scrollWheel, .mouseEntered, .mouseExited, .cursorUpdate, .otherMouseUp, .otherMouseDown, .leftMouseDragged, .rightMouseDragged, .otherMouseDragged]) { event in
+                if self.hitTest(event.locationInWindow) != nil {
+                    return nil
+                }
+                
+                return event
+            }
+            
+            NSView.eventMonitors.setObject(monitor as? NSObject, forKey: self)
         }
-        
-        disableControls()
     }
     
     /// Removes the progress overlay.
     func hideOverlay() {
+        if let firstResponder = NSView.firstResponders.object(forKey: self) {
+            window?.makeFirstResponder(firstResponder)
+            if let textField = firstResponder as? NSTextField {
+                textField.restoreSelection()
+            }
+        }
+        
         if let overlay = NSView.overlays.object(forKey: self) {
             overlay.removeFromSuperview()
         }
         
-        enableControls()
-    }
-    
-    /// Disables controls in the view while overllay is present.
-    private func disableControls() {
-        for subView in allSubviews {
-            if let textView = subView as? NSTextView {
-                textView.disableUserInteraction()
-            } else if let textField = subView as? NSTextField {
-                textField.disableUserInteraction()
-            } else if let scrollView = subView as? NSScrollView {
-                scrollView.disableUserInteraction()
-            } else if let control = subView as? NSControl {
-                control.disableControlUserInteraction()
-            }
-        }
-    }
-    
-    /// Enables controls in the view when overlay is removed.
-    private func enableControls() {
-        for subView in allSubviews {
-            if let textView = subView as? NSTextView {
-                textView.enableUserInteraction()
-            } else if let textField = subView as? NSTextField {
-                textField.enableUserInteraction()
-            } else if let scrollView = subView as? NSScrollView {
-                scrollView.enableUserInteraction()
-            } else if let control = subView as? NSControl {
-                control.enableControlUserInteraction()
-            }
+        if let monitor = NSView.eventMonitors.object(forKey: self) {
+            NSEvent.removeMonitor(monitor)
+            NSView.eventMonitors.removeObject(forKey: self)
         }
     }
 }
