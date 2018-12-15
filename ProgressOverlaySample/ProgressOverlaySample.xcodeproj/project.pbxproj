@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002CFDF0C7F3D538ABA27F45 /* Pods_ProgressOverlaySample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDBA93C8E40A3E3BD0DFEC8 /* Pods_ProgressOverlaySample.framework */; };
 		770A30ED21AB124F00603B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A30EC21AB124F00603B45 /* AppDelegate.swift */; };
 		770A30EF21AB124F00603B45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A30EE21AB124F00603B45 /* ViewController.swift */; };
 		770A30F121AB125100603B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 770A30F021AB125100603B45 /* Assets.xcassets */; };
 		770A30F421AB125100603B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770A30F221AB125100603B45 /* Main.storyboard */; };
-		770A30FE21AB13FF00603B45 /* ProgressOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */; };
-		770A310021AB229800603B45 /* NSView+ProgressOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */; };
-		770A314621B58CF900603B45 /* NSTextField+Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770A314521B58CF900603B45 /* NSTextField+Selection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DE3F73F23EC7A621EE7712A /* Pods-ProgressOverlaySample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressOverlaySample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressOverlaySample/Pods-ProgressOverlaySample.debug.xcconfig"; sourceTree = "<group>"; };
 		770A30E921AB124F00603B45 /* ProgressOverlaySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgressOverlaySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		770A30EC21AB124F00603B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		770A30EE21AB124F00603B45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,9 +23,8 @@
 		770A30F321AB125100603B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		770A30F521AB125100603B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		770A30F621AB125100603B45 /* ProgressOverlaySample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProgressOverlaySample.entitlements; sourceTree = "<group>"; };
-		770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressOverlayView.swift; sourceTree = "<group>"; };
-		770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+ProgressOverlay.swift"; sourceTree = "<group>"; };
-		770A314521B58CF900603B45 /* NSTextField+Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextField+Selection.swift"; sourceTree = "<group>"; };
+		CBDBA93C8E40A3E3BD0DFEC8 /* Pods_ProgressOverlaySample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProgressOverlaySample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9BB88AB41398E10A60AC2D /* Pods-ProgressOverlaySample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProgressOverlaySample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProgressOverlaySample/Pods-ProgressOverlaySample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,18 +32,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002CFDF0C7F3D538ABA27F45 /* Pods_ProgressOverlaySample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10C17930C9C46FCFAF7611B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBDBA93C8E40A3E3BD0DFEC8 /* Pods_ProgressOverlaySample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		770A30E021AB124F00603B45 = {
 			isa = PBXGroup;
 			children = (
-				770A30FC21AB138000603B45 /* ProgressOverlayView */,
 				770A30EB21AB124F00603B45 /* ProgressOverlaySample */,
 				770A30EA21AB124F00603B45 /* Products */,
+				815177FD5AE57A4720DBFEF4 /* Pods */,
+				10C17930C9C46FCFAF7611B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,14 +78,13 @@
 			path = ProgressOverlaySample;
 			sourceTree = "<group>";
 		};
-		770A30FC21AB138000603B45 /* ProgressOverlayView */ = {
+		815177FD5AE57A4720DBFEF4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				770A30FF21AB229800603B45 /* NSView+ProgressOverlay.swift */,
-				770A30FD21AB13FF00603B45 /* ProgressOverlayView.swift */,
-				770A314521B58CF900603B45 /* NSTextField+Selection.swift */,
+				0DE3F73F23EC7A621EE7712A /* Pods-ProgressOverlaySample.debug.xcconfig */,
+				EF9BB88AB41398E10A60AC2D /* Pods-ProgressOverlaySample.release.xcconfig */,
 			);
-			path = ProgressOverlayView;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,9 +94,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 770A30F921AB125100603B45 /* Build configuration list for PBXNativeTarget "ProgressOverlaySample" */;
 			buildPhases = (
+				B9CCE5891D156440E677C50D /* [CP] Check Pods Manifest.lock */,
 				770A30E521AB124F00603B45 /* Sources */,
 				770A30E621AB124F00603B45 /* Frameworks */,
 				770A30E721AB124F00603B45 /* Resources */,
+				94EA556D06906C071AE139D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -112,6 +121,11 @@
 				TargetAttributes = {
 					770A30E821AB124F00603B45 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -145,16 +159,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		94EA556D06906C071AE139D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ProgressOverlaySample/Pods-ProgressOverlaySample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaProgressOverlay/CocoaProgressOverlay.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaProgressOverlay.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProgressOverlaySample/Pods-ProgressOverlaySample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9CCE5891D156440E677C50D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProgressOverlaySample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		770A30E521AB124F00603B45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				770A30EF21AB124F00603B45 /* ViewController.swift in Sources */,
-				770A310021AB229800603B45 /* NSView+ProgressOverlay.swift in Sources */,
-				770A30FE21AB13FF00603B45 /* ProgressOverlayView.swift in Sources */,
 				770A30ED21AB124F00603B45 /* AppDelegate.swift in Sources */,
-				770A314621B58CF900603B45 /* NSTextField+Selection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,12 +347,14 @@
 		};
 		770A30FA21AB125100603B45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DE3F73F23EC7A621EE7712A /* Pods-ProgressOverlaySample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ProgressOverlaySample/ProgressOverlaySample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = YC975PN45W;
+				EXPANDED_CODE_SIGN_IDENTITY = "-";
+				EXPANDED_CODE_SIGN_IDENTITY_NAME = "-";
 				INFOPLIST_FILE = ProgressOverlaySample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -308,12 +368,14 @@
 		};
 		770A30FB21AB125100603B45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF9BB88AB41398E10A60AC2D /* Pods-ProgressOverlaySample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ProgressOverlaySample/ProgressOverlaySample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = YC975PN45W;
+				EXPANDED_CODE_SIGN_IDENTITY = "-";
+				EXPANDED_CODE_SIGN_IDENTITY_NAME = "-";
 				INFOPLIST_FILE = ProgressOverlaySample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,6 @@
+use_frameworks!
+target 'ProgressOverlaySample' do
+  pod 'CocoaProgressOverlay', :path => '../'
+  
+  
+end

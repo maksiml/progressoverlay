@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import CocoaProgressOverlay
 
 class ViewController: NSViewController {
 

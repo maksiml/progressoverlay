@@ -94,7 +94,7 @@ extension NSView {
     }
     
     /// Removes the progress overlay.
-    func hideOverlay() {
+    public func hideOverlay() {
         if let firstResponder = NSView.firstResponders.object(forKey: self) {
             window?.makeFirstResponder(firstResponder)
             

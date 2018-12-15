@@ -728,22 +728,22 @@
                                         <rect key="frame" x="0.0" y="100" width="193" height="89"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="qlc-5Z-cmP">
-                                            <rect key="frame" x="0.0" y="0.0" width="193" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="178" height="89"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textView ambiguous="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Bdz-yo-CgB" customClass="DisablableTextView" customModule="ProgressOverlaySample" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="193" height="89"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="89"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    <size key="minSize" width="193" height="89"/>
+                                                    <size key="minSize" width="178" height="89"/>
                                                     <size key="maxSize" width="440" height="10000000"/>
                                                     <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 </textView>
                                             </subviews>
                                         </clipView>
                                         <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="kfb-Bf-C2N">
-                                            <rect key="frame" x="177" y="0.0" width="16" height="89"/>
+                                            <rect key="frame" x="178" y="0.0" width="15" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
@@ -785,22 +785,22 @@
                                         <rect key="frame" x="201" y="100" width="239" height="89"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="3nN-40-FBB">
-                                            <rect key="frame" x="0.0" y="0.0" width="239" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="224" height="89"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textView ambiguous="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="gH6-Mo-L7T" customClass="DisablableTextView" customModule="ProgressOverlaySample" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="239" height="89"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="224" height="89"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    <size key="minSize" width="239" height="89"/>
+                                                    <size key="minSize" width="224" height="89"/>
                                                     <size key="maxSize" width="240" height="10000000"/>
                                                     <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 </textView>
                                             </subviews>
                                         </clipView>
                                         <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="szb-ZY-sVG">
-                                            <rect key="frame" x="223" y="0.0" width="16" height="89"/>
+                                            <rect key="frame" x="224" y="0.0" width="15" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
