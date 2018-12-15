@@ -8,6 +8,7 @@
 
 import Cocoa
 
+/// Extends 'NSTextField' to allow saving and restoring selection in the control.
 extension NSTextField {
     /// Saves selected range.
     fileprivate class Selection {

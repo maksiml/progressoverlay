@@ -14,13 +14,12 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var showOverlayButton: NSButtonCell!
     
-    @IBOutlet var disabledTextView: DisablableTextView!
+    @IBOutlet var disabledTextView: NSScrollView!
     
     var showOverlay = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        disabledTextView.isEnabled = false
     }
 
     override var representedObject: Any? {

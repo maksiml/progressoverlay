@@ -8,13 +8,16 @@
 
 import Cocoa
 
+/// Extends 'NSView' to show a progress overlay.
 extension NSView {
     
-    /// Contains all overlays ever presented mapped to respective view.
+    /// Contains all overlays ever presented mapped to respective views.
     private static var overlays = NSMapTable<NSView, ProgressOverlayView>(keyOptions: .weakMemory, valueOptions: .strongMemory)
     
+    /// Contains event monitors associated with different views when overlay is called.
     private static var eventMonitors = NSMapTable<NSView, NSObject>(keyOptions: .weakMemory, valueOptions: .strongMemory)
     
+    /// Constains first responders recorded before overlay was presented.
     private static var firstResponders = NSMapTable<NSView, NSResponder>(keyOptions: .weakMemory, valueOptions: .strongMemory)
     
     /// Retrieves a progress overlay associate with the current view. Creates a new one
@@ -50,14 +53,21 @@ extension NSView {
         }
     }
     
-    /// Show the progress overlay.
+    /// Shows the progress overlay.
     public func showOverlay() {
         if let overlay = progressOverlay {
             self.addSubview(overlay)
             var firstResponder = window?.firstResponder;
             var view = firstResponder as? NSView
+            
+            // Special handling for NSTextField as first responder in that
+            // case is internal NSTextView, we cannot set it as the first responder
+            // directly.
             while view != nil {
                 if let textField = view as? NSTextField {
+                    // We must preserve the selection, else when setting the NSTextField
+                    // back as first responder all the text in the control will be selected
+                    // and current selection will be lost.
                     textField.preserveSelection()
                     firstResponder = textField
                     break
@@ -66,8 +76,11 @@ extension NSView {
             }
             
             NSView.firstResponders.setObject(firstResponder, forKey: self)
+            
+            // Move focus to overlay.
             self.window?.makeFirstResponder(overlay)
             
+            // Stop passing mouse and keyboard events to the underlying controls.
             let monitor = NSEvent.addLocalMonitorForEvents(matching: [.leftMouseUp, .rightMouseUp, .leftMouseDown, .rightMouseUp, .scrollWheel, .mouseEntered, .mouseExited, .cursorUpdate, .otherMouseUp, .otherMouseDown, .leftMouseDragged, .rightMouseDragged, .otherMouseDragged]) { event in
                 if self.hitTest(event.locationInWindow) != nil {
                     return nil
@@ -84,6 +97,8 @@ extension NSView {
     func hideOverlay() {
         if let firstResponder = NSView.firstResponders.object(forKey: self) {
             window?.makeFirstResponder(firstResponder)
+            
+            // Restore saved selection if the first responder was a NSTextField
             if let textField = firstResponder as? NSTextField {
                 textField.restoreSelection()
             }
