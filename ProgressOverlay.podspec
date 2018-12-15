@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint CocoaProgressOverlay.podspec' to ensure this is a
+# Be sure to run `pod lib lint ProgressOverlay.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'CocoaProgressOverlay'
+  s.name             = 'ProgressOverlay'
   s.version          = '1.0.0'
   s.summary          = 'NSView extension that presents progress view on top of the NSView.'
 
@@ -22,7 +22,7 @@ Presents a transparent progress view on top of the NSView. The progress view wil
 controls to prevent user interaction while action is in progress. The control used by the progress view is standard NSProgress. 
                        DESC
 
-  s.homepage         = 'http://cocoaprogressoverlay.com'
+  s.homepage         = 'http://progressoverlay.com'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'maksiml@ceemax.com' => 'maksiml@ceemax.com' }
@@ -33,10 +33,10 @@ controls to prevent user interaction while action is in progress. The control us
   s.osx.deployment_target = "10.10"
   s.swift_version = "4.2"
 
-  s.source_files = 'CocoaProgressOverlay/Classes/**/*'
+  s.source_files = 'ProgressOverlay/Classes/**/*'
 
   # s.resource_bundles = {
-  #   'CocoaProgressOverlay' => ['CocoaProgressOverlay/Assets/*.png']
+  #   'ProgressOverlay' => ['ProgressOverlay/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

@@ -169,13 +169,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ProgressOverlaySample/Pods-ProgressOverlaySample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CocoaProgressOverlay/CocoaProgressOverlay.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressOverlay/ProgressOverlay.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaProgressOverlay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressOverlay.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

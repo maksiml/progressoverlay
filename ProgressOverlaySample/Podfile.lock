@@ -1,16 +1,16 @@
 PODS:
-  - CocoaProgressOverlay (1.0.0)
+  - ProgressOverlay (1.0.0)
 
 DEPENDENCIES:
-  - CocoaProgressOverlay (from `../`)
+  - ProgressOverlay (from `../`)
 
 EXTERNAL SOURCES:
-  CocoaProgressOverlay:
+  ProgressOverlay:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaProgressOverlay: 62ddcfd15475baaa06546e6516f7075299178994
+  ProgressOverlay: a7d9101f699b5d011ca31d6cb1f2f073b2ad0c05
 
-PODFILE CHECKSUM: 7e48d8dc9b348eded74a3db8e45e1773650d8ade
+PODFILE CHECKSUM: efea20793f472131626629e6cedface425eb5cdd
 
 COCOAPODS: 1.5.3
