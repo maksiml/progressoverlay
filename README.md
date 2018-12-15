@@ -1,9 +1,9 @@
-# CocoaProgressOverlay
+# ProgressOverlay
 
-[![CI Status](https://img.shields.io/travis/maksiml@ceemax.com/CocoaProgressOverlay.svg?style=flat)](https://travis-ci.org/maksiml@ceemax.com/CocoaProgressOverlay)
-[![Version](https://img.shields.io/cocoapods/v/CocoaProgressOverlay.svg?style=flat)](https://cocoapods.org/pods/CocoaProgressOverlay)
-[![License](https://img.shields.io/cocoapods/l/CocoaProgressOverlay.svg?style=flat)](https://cocoapods.org/pods/CocoaProgressOverlay)
-[![Platform](https://img.shields.io/cocoapods/p/CocoaProgressOverlay.svg?style=flat)](https://cocoapods.org/pods/CocoaProgressOverlay)
+[![CI Status](https://img.shields.io/travis/maksiml@ceemax.com/ProgressOverlay.svg?style=flat)](https://travis-ci.org/maksiml@ceemax.com/ProgressOverlay)
+[![Version](https://img.shields.io/cocoapods/v/ProgressOverlay.svg?style=flat)](https://cocoapods.org/pods/ProgressOverlay)
+[![License](https://img.shields.io/cocoapods/l/ProgressOverlay.svg?style=flat)](https://cocoapods.org/pods/ProgressOverlay)
+[![Platform](https://img.shields.io/cocoapods/p/ProgressOverlay.svg?style=flat)](https://cocoapods.org/pods/ProgressOverlay)
 
 ## Example
 
@@ -13,11 +13,11 @@ To run the example project, clone the repo, and run `pod install` from the Progr
 
 ## Installation
 
-CocoaProgressOverlay is available through [CocoaPods](https://cocoapods.org). To install
+ProgressOverlay is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'CocoaProgressOverlay'
+pod 'ProgressOverlay'
 ```
 
 ## Author
@@ -26,4 +26,4 @@ Maksim Libenson, maksiml@ceemax.com
 
 ## License
 
-CocoaProgressOverlay is available under the MIT license. See the LICENSE file for more info.
+ProgressOverlay is available under the MIT license. See the LICENSE file for more info.
