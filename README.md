@@ -5,9 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/ProgressOverlay.svg?style=flat)](https://cocoapods.org/pods/ProgressOverlay)
 [![Platform](https://img.shields.io/cocoapods/p/ProgressOverlay.svg?style=flat)](https://cocoapods.org/pods/ProgressOverlay)
 
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the ProgressOverlaySample directory first.
+
+[[https://github.com/maksiml/progressoverlay/blob/master/Media/sample.gif|alt=overlay sample]]
 
 ## Requirements
 
@@ -19,6 +22,8 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'ProgressOverlay'
 ```
+
+Add `import ProgressOverlay` to your `ViewController`. Now you can show the overlay on any view simply by calling `view.showOverlay()`.
 
 ## Author
 
