@@ -10,7 +10,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the ProgressOverlaySample directory first.
 
-[[https://github.com/maksiml/progressoverlay/blob/master/Media/sample.gif|alt=overlay sample]]
+![sample](https://github.com/maksiml/progressoverlay/blob/master/Media/sample.gif "Overlay Sample")
 
 ## Requirements
 
