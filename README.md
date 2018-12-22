@@ -25,10 +25,14 @@ pod 'ProgressOverlay'
 
 Add following import to your `ViewController`:
 
-```import ProgressOverlay```
+```swift
+import ProgressOverlay
+```
 
 Now you can show the overlay on any view simply by calling 
-```view.showOverlay()```.
+```swift
+view.showOverlay()
+```
 
 ## Author
 
